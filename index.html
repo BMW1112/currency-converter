@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Точные курсы ЦБ РФ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="currency-background"></div>
+    
+    <div class="converter">
+        <h1>Точные курсы ЦБ РФ</h1>
+        
+        <div class="input-group">
+            <input type="number" id="amount" value="100" placeholder="Сумма">
+            <select id="from-currency"></select>
+        </div>
+
+        <div class="swap-btn" onclick="swapCurrencies()">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2">
+                <path d="M16 17L21 12L16 7M21 12H3M8 7L3 12L8 17M3 12H21"/>
+            </svg>
+        </div>
+
+        <div class="input-group">
+            <input type="number" id="result" readonly placeholder="Результат">
+            <select id="to-currency"></select>
+        </div>
+
+        <div class="status">
+            <div class="loader"></div>
+            <span id="update-time"></span>
+        </div>
+
+        <button onclick="updateRates()" class="gold-button">
+            <span id="button-text">Обновить курс</span>
+            <span id="button-status"></span>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
